@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-gb" data-ng-app="placeholderDemo" id="ng-app">
+<head>
+  <meta charset="utf-8">
+  <title>Angular Placeholder</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="//necolas.github.io/normalize.css/2.1.1/normalize.css">
+  <style>
+    html {
+      background: #e7f3ff;
+      color: #1c000e;
+      text-shadow: 0 1px 0 #fff;
+    }
+    body {
+      margin: 8px auto;
+      max-width: 90%;
+      width: 480px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-weight: normal;
+      font-size: 30px;
+    }
+    a {
+      color: #0074e7;
+      text-decoration: none;
+      -webkit-transition: all 250ms ease-in-out;
+         -moz-transition: all 250ms ease-in-out;
+           -o-transition: all 250ms ease-in-out;
+              transition: all 250ms ease-in-out;
+    }
+    a:hover,
+    a:focus,
+    a:active {
+      color: #0067ce;
+      -webkit-transition: none;
+         -moz-transition: none;
+           -o-transition: none;
+              transition: none;
+    }
+    input[type='text'] {
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Angular Placeholder</h1>
+
+  <form name="formTest" data-ng-submit="submit()" data-ng-controller="formTestController">
+    <p>
+      <input type="text" data-msd-placeholder="Placeholder text" data-ng-model="text">
+    </p>
+    <p>
+      <input type="submit">
+    </p>
+  </form>
+
+  <small>
+    <a href="https://github.com/monospaced/angular-placeholder">https://github.com/monospaced/angular-placeholder</a> <br>
+    <a href="http://monospaced.github.io/">Monospaced Labs</a>
+  </small>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+  <script src="placeholder.js"></script>
+  <script>
+    angular.module('placeholderDemo', ['monospaced.placeholder'])
+      .controller('formTestController', ['$scope', function($scope){
+        $scope.submit = function(){
+          $scope.text = '';
+          $scope.formTest.$setPristine();
+        };
+      }]);
+  </script>
+</body>
+</html>
