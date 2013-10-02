@@ -1,6 +1,6 @@
 {
   "name": "angular-placeholder",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "placeholder.js",
   "ignore": [
     "**/.*",
@@ -8,6 +8,6 @@
     "components"
   ],
   "dependencies": {
-    "angular": "~1.1.5"
+    "angular": ">=1.1.5"
   }
 }

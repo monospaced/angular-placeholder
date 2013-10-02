@@ -1,5 +1,5 @@
 /*
- * angular-placeholder v0.0.1
+ * angular-placeholder v1.0.0
  * (c) 2013 Monospaced http://monospaced.com
  * License: MIT
  */
