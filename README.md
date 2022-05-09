@@ -1,5 +1,9 @@
-angular-placeholder
+[DEPRECATED] angular-placeholder
 ===================
+
+**Since [AngularJS support has been discontinued](https://blog.angular.io/discontinued-long-term-support-for-angularjs-cc066b82e65a) this package is deprecated and no longer maintained.**
+
+---
 
 AngularJS placeholder polyfill, without jQuery dependency
 
